@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Prep Calculator</title>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <h1>Meal Prep Calculator</h1>
+
+    <div id="total-protein-result"></div>
+    <div id="chicken-per-day-result"></div>
+    <div id="protein-per-day-result"></div>
+
+    <form id="myForm">
+      <div class="inline-form-fields">
+        <label for="total-grams-of-chicken">Enter total grams of chicken</label>
+        <input
+          type="number"
+          id="total-grams-of-chicken"
+          name="total-grams-of-chicken"
+        />
+      </div>
+      <div class="inline-form-fields">
+        <label for="total-days">Enter total days</label>
+        <input type="number" id="total-days" name="total-days" />
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
