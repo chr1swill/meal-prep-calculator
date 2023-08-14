@@ -69,6 +69,17 @@ body {
   height: auto;
   display: grid;
   place-content: center;
+  color: black;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  place-content: center;
 }
 
 h1 {
