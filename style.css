@@ -79,6 +79,7 @@ body {
   border-radius: 1rem;
   max-width: 270px;
   height: auto;
+  margin: 2rem 0rem 0rem 0rem;
   display: grid;
   place-content: center;
 }
