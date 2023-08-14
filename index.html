@@ -4,32 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meal Prep Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script defer src="app.js"></script>
   </head>
   <body>
-    <h1>Meal Prep Calculator</h1>
+    <main class="card">
+      <h1>Meal Prep Calculator</h1>
 
-    <div id="total-protein-result"></div>
-    <div id="chicken-per-day-result"></div>
-    <div id="protein-per-day-result"></div>
+      <div id="total-protein-result"></div>
+      <div id="chicken-per-day-result"></div>
+      <div id="protein-per-day-result"></div>
 
-    <form id="myForm">
-      <div class="inline-form-field">
-        <label for="total-grams-of-chicken">Enter total grams of chicken:</label>
-        <input
-          type="number"
-          id="total-grams-of-chicken"
-          name="total-grams-of-chicken"
-        />
-      </div>
-      <div class="inline-form-field">
-        <label for="total-days">Enter total days:</label>
-        <input type="number" id="total-days" name="total-days" />
+      <form id="myForm">
         <div class="inline-form-field">
-          <button type="submit">Submit</button>
+          <label for="total-grams-of-chicken"
+            >Enter total grams of chicken:</label
+          >
+          <input
+            type="number"
+            id="total-grams-of-chicken"
+            name="total-grams-of-chicken"
+          />
         </div>
-      </div>
-    </form>
+        <div class="inline-form-field">
+          <label for="total-days">Enter total days:</label>
+          <input type="number" id="total-days" name="total-days" />
+          <div class="inline-form-field">
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </main>
   </body>
 </html>
