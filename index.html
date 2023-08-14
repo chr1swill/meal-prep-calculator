@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meal Prep Calculator</title>
+    <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
   </head>
   <body>
@@ -14,18 +15,20 @@
     <div id="protein-per-day-result"></div>
 
     <form id="myForm">
-      <div class="inline-form-fields">
-        <label for="total-grams-of-chicken">Enter total grams of chicken</label>
+      <div class="inline-form-field">
+        <label for="total-grams-of-chicken">Enter total grams of chicken:</label>
         <input
           type="number"
           id="total-grams-of-chicken"
           name="total-grams-of-chicken"
         />
       </div>
-      <div class="inline-form-fields">
-        <label for="total-days">Enter total days</label>
+      <div class="inline-form-field">
+        <label for="total-days">Enter total days:</label>
         <input type="number" id="total-days" name="total-days" />
-        <button type="submit">Submit</button>
+        <div class="inline-form-field">
+          <button type="submit">Submit</button>
+        </div>
       </div>
     </form>
   </body>
