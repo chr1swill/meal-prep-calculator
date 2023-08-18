@@ -43,7 +43,7 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
   ).value;
   const totalDaysAsString = document.getElementById("total-days").value;
 
-  const totalGramsOfChickenAsArray = setStringToArray(
+  const totalGramsOfChickenAsArray = getStringToArray(
     totalGramsOfChickenAsString
   );
   const totalGramsOfChickenAsNumber = getArrayTotal(totalGramsOfChickenAsArray);
