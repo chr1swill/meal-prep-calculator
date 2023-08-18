@@ -21,11 +21,14 @@ const calculateProteinPerDay = (totalGramsOfChicken, totalDays) => {
   );
   return calculateTotalProtein(gramsOfChickenPerDay);
 };
+// const setStringToArray = (string) => {
+//   return string.split("," || " ").map((number) => parseFloat(number));
+// };
 
-const setStringToArray = (string) => {
-  return string.split("," || " ").map((number) => parseFloat(number));
-};
-
+const getSplitString = (stringList) => stringList.split(/[,\s]+/);
+const getStringToArray = (string) => getSplitString(string).map(parseFloat);
+console.log("This is string with commas", getStringToArray("1,2,3,4"));
+console.log("This is string without spaces", getSplitString("1 2 3 4"));
 const getArrayTotal = (array) => {
   return array.reduce((a, b) => a + b);
 };
@@ -40,7 +43,10 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
   ).value;
   const totalDaysAsString = document.getElementById("total-days").value;
 
-  const totalGramsOfChickenAsNumber = parseFloat(totalGramsOfChickenAsString);
+  const totalGramsOfChickenAsArray = setStringToArray(
+    totalGramsOfChickenAsString
+  );
+  const totalGramsOfChickenAsNumber = getArrayTotal(totalGramsOfChickenAsArray);
   const totalDaysAsNumber = parseFloat(totalDaysAsString);
 
   if (isNaN(totalGramsOfChickenAsNumber) || isNaN(totalDaysAsNumber)) {
