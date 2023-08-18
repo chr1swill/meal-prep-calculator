@@ -22,29 +22,39 @@ const calculateProteinPerDay = (totalGramsOfChicken, totalDays) => {
   return calculateTotalProtein(gramsOfChickenPerDay);
 };
 
+// add functionality to create an array total for you
+
+// take my list of string numbers and turn it into an array of numbers
+// reduce that array of numbers to a single number
+// let that number number be you totalGramsOfChicken that you can use to run the rest of the functions against
+// // then continue with checking of NaN and all that good stuff
+
 document.getElementById("myForm").addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const totalGramsOfChicken = parseFloat(
-    document.getElementById("total-grams-of-chicken").value
-  );
-  const totalDays = parseFloat(document.getElementById("total-days").value);
+  const totalGramsOfChickenAsString = document.getElementById(
+    "total-grams-of-chicken"
+  ).value;
+  const totalDaysAsString = document.getElementById("total-days").value;
+  const totalGramsOfChickenAsNumber = parseFloat(totalGramsOfChickenAsString);
+  const totalDaysAsNumber = parseFloat(totalDaysAsString);
 
-  if (isNaN(totalGramsOfChicken) || isNaN(totalDays)) {
+  if (isNaN(totalGramsOfChickenAsNumber) || isNaN(totalDaysAsNumber)) {
     alert("Please enter a valid number");
     return;
   }
 
   const gramsOfChickenPerDayAsResult = calculateGramsOfChickenPerDay(
-    totalGramsOfChicken,
-    totalDays
+    totalGramsOfChickenAsNumber,
+    totalDaysAsNumber
   ).toFixed(2);
   const proteinPerDayAsResult = calculateProteinPerDay(
-    totalGramsOfChicken,
-    totalDays
+    totalGramsOfChickenAsNumber,
+    totalDaysAsNumber
   ).toFixed(2);
-  const totalProteinAsResult =
-    calculateTotalProtein(totalGramsOfChicken).toFixed(2);
+  const totalProteinAsResult = calculateTotalProtein(
+    totalGramsOfChickenAsNumber
+  ).toFixed(2);
 
   document.getElementById(
     "total-protein-result"
