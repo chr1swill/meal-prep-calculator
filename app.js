@@ -6,13 +6,14 @@
 // divide total grams of protein by days to get grams of protein per day
 // display total grams protein per a day on screen
 
+const PROTEIN_PER_GRAM_OF_CHICKEN = 0.23;
+const totalGramsOfChicken = parseFloat(
+  document.getElementById("total-grams-of-chicken").value
+);
+const totalDays = parseFloat(document.getElementById("total-days").value);
+
 document.getElementById("myForm").addEventListener("submit", (event) => {
   event.preventDefault();
-
-  const totalGramsOfChicken = parseFloat(
-    document.getElementById("total-grams-of-chicken").value
-  );
-  const totalDays = parseFloat(document.getElementById("total-days").value);
 
   if (isNaN(totalGramsOfChicken) || isNaN(totalDays)) {
     alert("Please enter a valid number");
@@ -40,20 +41,18 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
   ).innerHTML = `${proteinPerDay}g of protein per day`;
 });
 
-const PROTEIN_PER_GRAM_OF_CHICKEN = 0.23;
-
-function calculateGramsOfChickenPerDay(totalGramsOfChicken, totalDays) {
+const calculateGramsOfChickenPerDay = (totalGramsOfChicken, totalDays) => {
   return totalGramsOfChicken / totalDays;
-}
+};
 
-function calculateProteinPerDay(totalGramsOfChicken, totalDays) {
+const calculateProteinPerDay = (totalGramsOfChicken, totalDays) => {
   const gramsOfChickenPerDay = calculateGramsOfChickenPerDay(
     totalGramsOfChicken,
     totalDays
   );
   return calculateTotalProtein(gramsOfChickenPerDay);
-}
+};
 
-function calculateTotalProtein(gramsOfChicken) {
+const calculateTotalProtein = (gramsOfChicken) => {
   return gramsOfChicken * PROTEIN_PER_GRAM_OF_CHICKEN;
-}
+};
