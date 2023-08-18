@@ -21,19 +21,11 @@ const calculateProteinPerDay = (totalGramsOfChicken, totalDays) => {
   );
   return calculateTotalProtein(gramsOfChickenPerDay);
 };
-// const setStringToArray = (string) => {
-//   return string.split("," || " ").map((number) => parseFloat(number));
-// };
 
 const getSplitString = (stringList) => stringList.split(/[,\s]+/);
-const getStringToArray = (string) => getSplitString(string).map(parseFloat);
-console.log("This is string with commas", getStringToArray("1,2,3,4"));
-console.log("This is string without spaces", getSplitString("1 2 3 4"));
-const getArrayTotal = (array) => {
-  return array.reduce((a, b) => a + b);
-};
-// let that number number be you totalGramsOfChicken that you can use to run the rest of the functions against
-// // then continue with checking of NaN and all that good stuff
+const getStringToArray = (stringList) =>
+  getSplitString(stringList).map(parseFloat);
+const getArrayTotal = (array) => array.reduce((a, b) => a + b);
 
 document.getElementById("myForm").addEventListener("submit", (event) => {
   event.preventDefault();
