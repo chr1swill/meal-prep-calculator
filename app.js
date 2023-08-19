@@ -60,11 +60,11 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
 
   document.getElementById(
     "total-protein-result"
-  ).innerHTML = `<strong>${totalProteinAsResult}g</strong> of protein total`;
+  ).innerHTML = `<strong>${totalProteinAsResult}g</strong>`;
   document.getElementById(
     "chicken-per-day-result"
-  ).innerHTML = `<strong>${gramsOfChickenPerDayAsResult}g</strong> of chicken per day`;
+  ).innerHTML = `<strong>${gramsOfChickenPerDayAsResult}g</strong>`;
   document.getElementById(
     "protein-per-day-result"
-  ).innerHTML = `<strong>${proteinPerDayAsResult}g</strong> of protein per day`;
+  ).innerHTML = `<strong>${proteinPerDayAsResult}g</strong>`;
 });
