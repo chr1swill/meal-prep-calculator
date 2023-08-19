@@ -122,7 +122,6 @@ input,
 .button {
   border: none;
   border-radius: var(--border-radius);
-
   padding: 2px 6px;
 }
 
@@ -139,6 +138,12 @@ input,
   color: var(--text-color);
   text-align: center;
   font-weight: bold;
+}
+
+.results .button {
+  text-decoration: underline;
+  background-color: var(--secondary-color);
+  margin: 200px 0px 0px 0px;
 }
 
 .button:hover {
