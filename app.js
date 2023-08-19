@@ -27,15 +27,26 @@ const getStringToArray = (stringList) =>
   getSplitString(stringList).map(parseFloat);
 const getArrayTotal = (array) => array.reduce((a, b) => a + b);
 
-const textToCopy = document.getElementById("chicken-per-day-result").innerHTML;
-const copyContent = async () => {
-  try {
-    await navigator.clipboard.writeText(textToCopy);
-    console.log("Content copied to clipboard");
-  } catch (err) {
-    console.error("Failed to copy: ", err);
-  }
+const copyToClipboard = (text) => {
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      console.log(`${text} has been copied`);
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+    });
 };
+
+document.getElementById("result-button").addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const chickenGramsString = document.getElementById(
+    "total-grams-of-chicken"
+  ).innerHTML;
+  const copyChickenGrams = () => copyToClipboard(chickenGramsString);
+  return copyChickenGrams();
+});
 
 document.getElementById("myForm").addEventListener("submit", (event) => {
   event.preventDefault();
