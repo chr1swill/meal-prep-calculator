@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #3d3b44;
+  --background-color: #000000;
+  --secondary-color: #181b18;
+  --text-color: #cfcac9;
+}
+
 *,
 *::before,
 *::after {
