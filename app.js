@@ -27,6 +27,16 @@ const getStringToArray = (stringList) =>
   getSplitString(stringList).map(parseFloat);
 const getArrayTotal = (array) => array.reduce((a, b) => a + b);
 
+const textToCopy = document.getElementById("chicken-per-day-result").innerHTML;
+const copyContent = async () => {
+  try {
+    await navigator.clipboard.writeText(textToCopy);
+    console.log("Content copied to clipboard");
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+  }
+};
+
 document.getElementById("myForm").addEventListener("submit", (event) => {
   event.preventDefault();
 
