@@ -3,6 +3,7 @@
   --background-color: #000000;
   --secondary-color: #181b18;
   --text-color: #cfcac9;
+  --border-radius: 10px;
 }
 
 *,
@@ -99,7 +100,7 @@ h1 {
 .results {
   background-color: var(--background-color);
   padding: 10px 10px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
 }
 
 .inline-form-field {
@@ -111,7 +112,7 @@ h1 {
 input,
 .button {
   border: none;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   padding: 2px 6px;
 }
 
