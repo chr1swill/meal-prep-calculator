@@ -98,7 +98,7 @@ h1 {
 }
 
 .results {
-  background-color: var(--background-color);
+  background-color: var(--primary-color);
   padding: 10px 10px;
   border-radius: var(--border-radius);
 }
