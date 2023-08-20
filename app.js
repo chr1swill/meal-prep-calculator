@@ -42,10 +42,11 @@ document.getElementById("result-button").addEventListener("click", (event) => {
   event.preventDefault();
 
   const chickenGramsString = document.getElementById(
-    "total-grams-of-chicken"
-  ).innerHTML;
+    "chicken-per-day-result"
+  ).innerText;
   const copyChickenGrams = () => copyToClipboard(chickenGramsString);
-  return copyChickenGrams();
+
+  copyChickenGrams();
 });
 
 document.getElementById("myForm").addEventListener("submit", (event) => {

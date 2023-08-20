@@ -83,7 +83,7 @@ body {
 }
 
 .card {
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   border-radius: var(--border-radius);
   max-width: 270px;
   height: auto;
