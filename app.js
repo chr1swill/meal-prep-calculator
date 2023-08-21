@@ -30,6 +30,9 @@ const copyToClipboard = (text) => {
     });
 };
 
+// input values via shortcut 
+
+
 document.getElementById("result-button").addEventListener("click", (event) => {
   event.preventDefault();
 
