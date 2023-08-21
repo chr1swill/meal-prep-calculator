@@ -31,11 +31,9 @@ const copyToClipboard = (text) => {
 };
 
 // input form values via iphone shortcut 
-const injectInputs = (value1, value2) => {
-    const chickenInput = document.getElementById("total-grams-of-chicken");
-    const daysInput = document.getElementById("total-days");
-    chickenInput.value = value1;
-    daysInput.value = value2; 
+const setInputValue = (inputId, inputValue) => {
+    const selectedInput = document.getElementById(inputId);
+    selectedInput.value = inputValue
 }
 
 // submit form via iphone shortcut
