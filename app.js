@@ -1,11 +1,3 @@
-// ask for total grams of chicken and days
-// multiply total grams of chicken by 0.23 to get total grams of protein
-// display total grams of protein on screen
-// divide total grams of chicken by days to get grams of chicken per day
-// display total grams og chicken per a day on screen
-// divide total grams of protein by days to get grams of protein per day
-// display total grams protein per a day on screen
-
 const PROTEIN_PER_GRAM_OF_CHICKEN = 0.23;
 
 const calculateGramsOfChickenPerDay = (totalGramsOfChicken, totalDays) => {
