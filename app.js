@@ -31,7 +31,12 @@ const copyToClipboard = (text) => {
 };
 
 // input values via shortcut 
-
+const injectInputs = (value1, value2) => {
+    const chickenInput = document.getElementById("total-grams-of-chicken");
+    const daysInput = document.getElementById("total-days");
+    chickenInput.value = value1;
+    daysInput.value = value2; 
+}
 
 document.getElementById("result-button").addEventListener("click", (event) => {
   event.preventDefault();
