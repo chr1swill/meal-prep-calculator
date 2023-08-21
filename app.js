@@ -30,12 +30,18 @@ const copyToClipboard = (text) => {
     });
 };
 
-// input values via shortcut 
+// input form values via iphone shortcut 
 const injectInputs = (value1, value2) => {
     const chickenInput = document.getElementById("total-grams-of-chicken");
     const daysInput = document.getElementById("total-days");
     chickenInput.value = value1;
     daysInput.value = value2; 
+}
+
+// submit form via iphone shortcut
+const submitForm = () => {
+    const formSubmitButton = document.getElementById("form-submit-button");
+    formSubmitButton.click();
 }
 
 document.getElementById("result-button").addEventListener("click", (event) => {
