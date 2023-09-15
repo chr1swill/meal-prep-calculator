@@ -30,16 +30,14 @@ const copyToClipboard = (text) => {
     });
 };
 
-// input form values via iphone shortcut 
 const setInputValue = (inputId, inputValue) => {
-    const selectedInput = document.getElementById(inputId);
-    selectedInput.value = inputValue
+  const selectedInput = document.getElementById(inputId);
+  selectedInput.value = inputValue;
 }
 
-// submit form via iphone shortcut
 const submitForm = () => {
-    const formSubmitButton = document.getElementById("form-submit-button");
-    formSubmitButton.click();
+  const formSubmitButton = document.getElementById("form-submit-button");
+  formSubmitButton.click();
 }
 
 document.getElementById("result-button").addEventListener("click", (event) => {
