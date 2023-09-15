@@ -1,44 +1,5 @@
-const PROTEIN_PER_GRAM_OF_CHICKEN = 0.23;
-
-const calculateGramsOfChickenPerDay = (totalGramsOfChicken, totalDays) => {
-  return totalGramsOfChicken / totalDays;
-};
-const calculateTotalProtein = (gramsOfChicken) => {
-  return gramsOfChicken * PROTEIN_PER_GRAM_OF_CHICKEN;
-};
-const calculateProteinPerDay = (totalGramsOfChicken, totalDays) => {
-  const gramsOfChickenPerDay = calculateGramsOfChickenPerDay(
-    totalGramsOfChicken,
-    totalDays
-  );
-  return calculateTotalProtein(gramsOfChickenPerDay);
-};
-
-const getSplitString = (stringList) => stringList.split(/[,\s]+/);
-const getStringToArray = (stringList) =>
-  getSplitString(stringList).map(parseFloat);
-const getArrayTotal = (array) => array.reduce((a, b) => a + b);
-
-const copyToClipboard = (text) => {
-  navigator.clipboard
-    .writeText(text)
-    .then(() => {
-      console.log(`${text} has been copied`);
-    })
-    .catch((err) => {
-      console.error("Failed to copy: ", err);
-    });
-};
-
-const setInputValue = (inputId, inputValue) => {
-  const selectedInput = document.getElementById(inputId);
-  selectedInput.value = inputValue;
-}
-
-const submitForm = () => {
-  const formSubmitButton = document.getElementById("form-submit-button");
-  formSubmitButton.click();
-}
+import * as calculation from "./modules/calculation.js";
+import * as dom from "./modules/dom.js";
 
 document.getElementById("result-button").addEventListener("click", (event) => {
   event.preventDefault();
@@ -46,7 +7,7 @@ document.getElementById("result-button").addEventListener("click", (event) => {
   const chickenGramsString = document.getElementById(
     "chicken-per-day-result"
   ).innerText;
-  const copyChickenGrams = () => copyToClipboard(chickenGramsString);
+  const copyChickenGrams = () => dom.copyToClipboard(chickenGramsString);
 
   copyChickenGrams();
 });
@@ -59,10 +20,10 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
   ).value;
   const totalDaysAsString = document.getElementById("total-days").value;
 
-  const totalGramsOfChickenAsArray = getStringToArray(
+  const totalGramsOfChickenAsArray = calculation.getStringToArray(
     totalGramsOfChickenAsString
   );
-  const totalGramsOfChickenAsNumber = getArrayTotal(totalGramsOfChickenAsArray);
+  const totalGramsOfChickenAsNumber = calculation.getArrayTotal(totalGramsOfChickenAsArray);
   const totalDaysAsNumber = parseFloat(totalDaysAsString);
 
   if (isNaN(totalGramsOfChickenAsNumber) || isNaN(totalDaysAsNumber)) {
@@ -70,15 +31,15 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
     return;
   }
 
-  const gramsOfChickenPerDayAsResult = calculateGramsOfChickenPerDay(
+  const gramsOfChickenPerDayAsResult = calculation.calculateGramsOfChickenPerDay(
     totalGramsOfChickenAsNumber,
     totalDaysAsNumber
   ).toFixed(2);
-  const proteinPerDayAsResult = calculateProteinPerDay(
+  const proteinPerDayAsResult = calculation.calculateProteinPerDay(
     totalGramsOfChickenAsNumber,
     totalDaysAsNumber
   ).toFixed(2);
-  const totalProteinAsResult = calculateTotalProtein(
+  const totalProteinAsResult = calculation.calculateTotalProtein(
     totalGramsOfChickenAsNumber
   ).toFixed(2);
 
