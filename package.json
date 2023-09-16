@@ -1,0 +1,16 @@
+{
+  "name": "meal-prep-calculator-app",
+  "version": "1.0.0",
+  "description": "I created an app that will allow me to make repetitive meal prep a little bit easier.",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
