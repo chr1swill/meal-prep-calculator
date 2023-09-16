@@ -8,11 +8,9 @@ export const copyToClipboard = (text) => {
         console.error("Failed to copy: ", err);
     });
 };
-export const setInputValue = (inputId, inputValue) => {
-    const selectedInput = document.getElementById(inputId);
-    selectedInput.value = inputValue;
-};
-export const submitForm = () => {
-    const formSubmitButton = document.getElementById("form-submit-button");
-    formSubmitButton.click();
+export const setInnerHTML = (elementId, html) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.innerHTML = html;
+    }
 };

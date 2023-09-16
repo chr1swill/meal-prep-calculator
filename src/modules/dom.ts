@@ -8,3 +8,10 @@ export const copyToClipboard = (text: string): void => {
       console.error("Failed to copy: ", err);
     });
 };
+
+export const setInnerHTML = (elementId: string, html: string): void => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.innerHTML = html;
+  }
+};

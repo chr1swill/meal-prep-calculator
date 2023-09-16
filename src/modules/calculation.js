@@ -10,5 +10,9 @@ export const calculateProteinPerDay = (totalGramsOfChicken, totalDays) => {
     return calculateTotalProtein(gramsOfChickenPerDay);
 };
 export const getSplitString = (stringList) => stringList.split(/[,\s]+/);
-export const getStringToArray = (stringList) => getSplitString(stringList).map(parseFloat);
-export const getArrayTotal = (array) => array.reduce((a, b) => a + b);
+export const getStringToArray = (stringList) => {
+    return getSplitString(stringList).map(parseFloat);
+};
+export const getArrayTotal = (array) => {
+    return array.reduce((a, b) => a + b);
+};

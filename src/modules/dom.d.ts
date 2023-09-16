@@ -1,3 +1,2 @@
-export declare const copyToClipboard: (text: any) => void;
-export declare const setInputValue: (inputId: any, inputValue: any) => void;
-export declare const submitForm: () => void;
+export declare const copyToClipboard: (text: string) => void;
+export declare const setInnerHTML: (elementId: string, html: string) => void;
