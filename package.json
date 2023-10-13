@@ -4,8 +4,8 @@
   "description": "I created an app that will allow me to make repetitive meal prep a little bit easier.",
   "main": "main.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node ."
+    "build": "tsc --outDir ./dist",
+    "start": "node dist/main.js"
   },
   "keywords": [],
   "author": "",
