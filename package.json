@@ -1,11 +1,11 @@
 {
   "name": "meal-prep-calculator-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "I created an app that will allow me to make repetitive meal prep a little bit easier.",
-  "main": "dist/main.js",
+  "main": "main.js",
   "scripts": {
-    "build": "tsc --outDir ./dist",
-    "start": "node dist/main.js"
+    "build": "tsc",
+    "start": "node ."
   },
   "keywords": [],
   "author": "",
